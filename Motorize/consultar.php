@@ -67,7 +67,7 @@
 		<div class="valor">
 			<h1>Valor</h1>
 			<form method="post" action="consultar.php">
-                <input type="number" name="filtrovalor" step="500" min="0" placeholder="Qual o valor?">
+                <input type="number" name="filtrovalor" step="500" min="0" placeholder="Qual o valor máximo?">
 				<button type="submit" class="buscabotao"><i class="fa-solid fa-magnifying-glass"></i></button>
                 <ul id="resultado"></ul>
             </form>
