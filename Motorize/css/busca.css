@@ -1,0 +1,72 @@
+.busca{
+    max-width: var(--max-width);
+    margin: auto;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    place-items: center;
+    padding-bottom: 2rem;
+        & h1{
+            color: var(--primary-color);
+            text-align: center;
+            margin: 0.5rem;
+        }
+}
+.marca{
+    & input{
+        padding: 1rem;
+        border: solid 2px var(--primary-color);
+        border-radius: 5px;
+    }
+}
+.modelo{
+    & input{
+        padding: 1rem;
+        border: solid 2px var(--primary-color);
+        border-radius: 5px;
+    }
+}
+.valor{
+    & input{
+        padding: 1rem;
+        border: solid 2px var(--primary-color);
+        border-radius: 5px;
+    }
+}
+.buscabotao {
+    color: var(--white);
+    background-color: var(--primary-color);
+    padding: 1rem;
+    border-radius: 100%;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.buscabotao:hover {
+    background-color:transparent;
+    border: solid 2px var(--primary-color);
+    color: var(--primary-color);
+}
+.buscacard{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    font-size: 8px;
+    margin: 5px 0px 0px 0px;
+    & img{
+        border-radius: 5px;
+        width: 50px;
+        height: 40px;
+    }
+}
+@media (width < 988px) { 
+    .busca{
+        grid-template-columns: 1fr;
+    }
+}

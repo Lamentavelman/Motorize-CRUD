@@ -1,0 +1,118 @@
+:root{
+    --blur: 16px;
+    --size: clamp(300px, 50vmin, 600px);
+    --hover: 1;
+}
+.servicos{
+    max-width: var(--max-width);
+    margin: auto;
+    text-align: center;
+    & p{
+        color: var(--primary-color);
+    }
+    & img{
+        max-width: 800px; 
+        border-radius: 5rem 5rem 0rem 0rem;
+        margin: 3rem 0rem;
+    }
+}
+.pontosfortes{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+.centraldestaque{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2rem;
+    margin: 3rem 0rem;
+}
+.destaque {
+    width: 100%;
+    height: clamp(21rem, 20rem, 17rem);
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 300ms;
+    margin: 2rem 0rem;
+}
+  
+.destaque:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+  
+.destaque img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+  
+.destaque .content {
+    box-sizing: border-box;
+    width: 100%;
+    position: absolute;
+    padding: 30px 20px 20px 20px;
+    height: auto;
+    bottom: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.925));
+}
+  
+.destaque .texto,
+.destaque .title {
+    margin: 0;
+}
+  
+.destaque .texto {
+    color: rgba(255, 255, 255, 0.9);
+    margin: 4px;
+}
+  
+.destaque .title {
+
+    color: #fff;
+}
+.historia{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 2rem 0rem;
+}
+.historia img{
+    border-radius: 1rem 0rem 0rem 1rem;
+    max-width: 550px;
+}
+.historia p{
+    text-align: start;
+    color: var(--text-dark);
+    max-width: 500px;
+    padding: 2rem;
+    margin: auto;
+    line-height: 1.5rem;
+}
+@media (width < 988px) { 
+    .servicos{
+        & img{
+            max-width: 300px; 
+        }
+    }
+    .pontosfortes{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .centraldestaque{
+        grid-template-columns: repeat(2, 1fr); 
+    }
+    .historia img{
+        border-radius: 0rem;
+        max-width: 400px;
+    }
+}
+@media (width < 500px) {
+    .destaque{
+        display: none;
+    }
+}
